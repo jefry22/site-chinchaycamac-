@@ -1,0 +1,67 @@
+---
+import CardAlojamiento from "../components/CardAlojamiento.astro";
+const Bungalows = [
+  {
+    title: "Bungalow Basico",
+    area: "16m2",
+    tipoCama: "Doble",
+    servicios: ["Baño", "Terraza con vista al Mar"],
+    capacidad: 2,
+    url: "../../img1.webp",
+    price: "S/250.00",
+  },
+  {
+    title: "Bungalow Basico",
+    area: "16m2",
+    tipoCama: "Doble",
+    servicios: ["Baño", "Terraza con vista al Mar"],
+    capacidad: 2,
+    url: "../../img1.webp",
+    price: "S/250.00",
+  },
+  {
+    title: "Bungalow Basico",
+    area: "16m2",
+    tipoCama: "Doble",
+    servicios: ["Baño", "Terraza con vista al Mar"],
+    capacidad: 2,
+    price: "S/250.00",
+    url: "../../img1.webp",
+  },
+  {
+    title: "Bungalow Basico",
+    area: "16m2",
+    tipoCama: "Doble",
+    servicios: ["Baño", "Terraza con vista al Mar"],
+    capacidad: 2,
+    url: "../../img1.webp",
+    price: "S/250.00",
+  },
+  {
+    title: "Bungalow Basico",
+    area: "16m2",
+    tipoCama: "Doble",
+    servicios: ["Baño", "Terraza con vista al Mar"],
+    capacidad: 2,
+    url: "../../img1.webp",
+    price: "S/250.00",
+  },
+  {
+    title: "Bungalow Basico",
+    area: "16m2",
+    tipoCama: "Doble",
+    servicios: ["Baño", "Terraza con vista al Mar"],
+    capacidad: 2,
+    url: "../../img1.webp",
+    price: "S/250.00",
+  },
+];
+---
+
+<section class="flex flex-col items-center py-12">
+  <h2 class="text-2xl font-semibold text-center uppercase">Alojamiento</h2>
+  <div class="w-[120px] h-[4px] bg-[#1ABC9C] mt-2 rounded-lg"></div>
+  <div class="flex space-x-3 flex-wrap justify-center">
+    {Bungalows.map((item) => <CardAlojamiento {...item} />)}
+  </div>
+</section>

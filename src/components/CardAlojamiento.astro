@@ -1,0 +1,51 @@
+---
+interface Props {
+  title: string;
+  area: string;
+  price: string;
+  tipoCama: string;
+  servicios: string[];
+  capacidad: number;
+  url: string;
+}
+const { title, price, area, tipoCama, servicios, capacidad, url } = Astro.props;
+---
+
+<div
+  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-10"
+>
+  <div class="relative">
+    <img
+      class="rounded-t-lg w-full h-[300px] object-cover"
+      src=`${url}`
+      alt=""
+    />
+    <div
+      class="absolute top-0 m-2 px-4 py-2 text-sm rounded-2xl text-white bg-[#003366]"
+    >
+      {price}
+    </div>
+  </div>
+
+  <div class="p-5">
+    <h5
+      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+    >
+      {title}
+    </h5>
+    <ul class="flex flex-col px-5 opacity-70">
+      <li class="list-disc">
+        <span>Área: {area}</span>
+      </li>
+      <li class="list-disc">
+        <span>Cama: {tipoCama}</span>
+      </li>
+      <li class="list-disc">
+        <span>Servicios: {servicios}</span>
+      </li>
+      <li class="list-disc">
+        <span>Capacidad: {capacidad} personas</span>
+      </li>
+    </ul>
+  </div>
+</div>
