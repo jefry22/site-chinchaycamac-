@@ -12,7 +12,8 @@ import Menu from "../icons/Menu.astro";
     <video class="w-full h-full object-cover" src="/video.mp4" autoplay loop muted> </video>
   </div>
   <div class="absolute inset-0 bg-black opacity-50"></div>
-  <div class="absolute flex justify-between items-center w-full px-14 py-6">
+
+  <div class="absolute  flex justify-between items-center w-full px-14 py-6">
     <Image
       src={logoChinchay}
       alt="logoChinchaycamac"
@@ -27,13 +28,13 @@ import Menu from "../icons/Menu.astro";
     </nav>
   </div>
 
-  <a id="btnMenu" href="#" class="absolute z-20 right-0 top-4 justify-center  lg:hidden">
+  <a id="btnMenu" href="#" class="absolute z-20 right-8 top-5 justify-center  lg:hidden">
     <Menu></Menu>
   </a>
 
-  <div id="mobileMenu" class="absolute top-0 left-0 w-full bg-black z-10 hidden">
+  <div id="mobileMenu" class="absolute  flex justify-center  top-0 h-[30vh] left-0 w-full bg-[#1abc9c] z-10 lg:hidden">
     <!-- Aquí va el contenido del menú desplegable para dispositivos móviles -->
-    <ul class="text-white text-center py-6">
+    <ul class="text-white text-center py-6 space-y-4">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#somos">Quienes Somos</a></li>
       <li><a href="#alojamiento">Alojamiento</a></li>
@@ -46,17 +47,19 @@ import Menu from "../icons/Menu.astro";
     class="absolute flex flex-col space-y-16 justify-center items-center h-full w-full"
   >
     <h2
-      class="text-5xl text-white w-1/2 text-pretty"
+      class="text-5xl lg:text-6xl text-white text-center lg:w-1/2 text-pretty"
       style="font-family:'Lobster'"
     >
       Tu hogar lejos de casa, con vistas al mar
     </h2>
     <a
       href="#"
-      class="bg-[#1ABC9C] flex justify-center px-12 py-2 rounded-2xl text-white font-bold"
+      class="bg-[#1ABC9C] flex justify-center px-12 text-xl py-3 uppercase lg:py-2 rounded-2xl text-white font-medium"
       >Reservar</a
     >
   </div>
+
+
 </header>
 
 
