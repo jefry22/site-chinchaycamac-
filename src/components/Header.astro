@@ -2,11 +2,14 @@
 import { Image } from "astro:assets";
 import "@fontsource/lobster";
 import logoChinchay from "../../public/logoChinchay.webp";
+import Menu from "../icons/Menu.astro";
+
+
 ---
 
 <header class="w-full h-[100vh] bg-cover bg-center relative overflow-hidden">
-  <div class="absolute flex justify-center items-center h-full w-full">
-    <video class="w-full" src="/video.mp4" autoplay loop muted> </video>
+  <div class="absolute lg:flex justify-center items-center h-full w-full">
+    <video class="w-full h-full object-cover" src="/video.mp4" autoplay loop muted> </video>
   </div>
   <div class="absolute inset-0 bg-black opacity-50"></div>
   <div class="absolute flex justify-between items-center w-full px-14 py-6">
@@ -15,7 +18,7 @@ import logoChinchay from "../../public/logoChinchay.webp";
       alt="logoChinchaycamac"
       class="w-[173px] h-[48px]"
     />
-    <nav class="space-x-2 text-white z-20">
+    <nav class="lg:flex hidden space-x-2 text-white z-20">
       <a href="#inicio">Inicio</a>
       <a href="#somos">Quienes Somos</a>
       <a href="#alojamiento">Alojamiento</a>
@@ -23,6 +26,22 @@ import logoChinchay from "../../public/logoChinchay.webp";
       <a href="#testimonio">Testimonio</a>
     </nav>
   </div>
+
+  <a id="btnMenu" href="#" class="absolute z-20 right-0 top-4 justify-center  lg:hidden">
+    <Menu></Menu>
+  </a>
+
+  <div id="mobileMenu" class="absolute top-0 left-0 w-full bg-black z-10 hidden">
+    <!-- Aquí va el contenido del menú desplegable para dispositivos móviles -->
+    <ul class="text-white text-center py-6">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#somos">Quienes Somos</a></li>
+      <li><a href="#alojamiento">Alojamiento</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#testimonio">Testimonio</a></li>
+    </ul>
+  </div>
+  
   <div
     class="absolute flex flex-col space-y-16 justify-center items-center h-full w-full"
   >
@@ -39,3 +58,5 @@ import logoChinchay from "../../public/logoChinchay.webp";
     >
   </div>
 </header>
+
+
