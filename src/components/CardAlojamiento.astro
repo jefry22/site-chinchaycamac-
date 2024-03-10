@@ -1,14 +1,20 @@
 ---
+import Area from '../icons/Area.astro';
+import Cama from '../icons/Cama.astro';
+import Personas from '../icons/Personas.astro';
+import Info from './Info.astro'
+
 interface Props {
   title: string;
   area: string;
   price: string;
+  nHabitaciones:number;
   tipoCama: string;
   servicios: string[];
-  capacidad: number;
+  capacidad: string;
   url: string;
 }
-const { title, price, area, tipoCama, servicios, capacidad, url } = Astro.props;
+const { title, price,nHabitaciones, area, tipoCama, servicios, capacidad, url } = Astro.props;
 ---
 
 <div
@@ -29,23 +35,21 @@ const { title, price, area, tipoCama, servicios, capacidad, url } = Astro.props;
 
   <div class="p-5">
     <h5
-      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-    >
+      class="mb-2 text-xl font-bold tracking-tight text-[#003366] dark:text-white"
+>
       {title}
     </h5>
-    <ul class="flex flex-col px-5 opacity-70">
-      <li class="list-disc">
-        <span>Área: {area}</span>
-      </li>
-      <li class="list-disc">
-        <span>Cama: {tipoCama}</span>
-      </li>
-      <li class="list-disc">
-        <span>Servicios: {servicios}</span>
-      </li>
-      <li class="list-disc">
-        <span>Capacidad: {capacidad} personas</span>
-      </li>
-    </ul>
+    <div class="flex flex-col px-5 opacity-70 space-y-2 mt-4 text-base">
+      <Info tipo={area}>
+        <Area/>
+      </Info>
+      <Info tipo={tipoCama}>
+        <Cama/>
+      </Info>
+      <Info tipo={capacidad}>
+        <Personas/>
+      </Info>
+    </div>
+    
   </div>
 </div>
