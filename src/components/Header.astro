@@ -3,17 +3,22 @@ import { Image } from "astro:assets";
 import "@fontsource/lobster";
 import logoChinchay from "../../public/logoChinchay.webp";
 import Menu from "../icons/Menu.astro";
-
-
 ---
 
 <header class="w-full h-[100vh] bg-cover bg-center relative overflow-hidden">
   <div class="absolute lg:flex justify-center items-center h-full w-full">
-    <video class="w-full h-full object-cover" src="/video.mp4" autoplay loop muted> </video>
+    <video
+      class="w-full h-full object-cover"
+      src="/video.mp4"
+      autoplay
+      loop
+      muted
+    >
+    </video>
   </div>
   <div class="absolute inset-0 bg-black opacity-50"></div>
 
-  <div class="absolute  flex justify-between items-center w-full px-14 py-6">
+  <div class="absolute flex justify-between items-center w-full px-14 py-6">
     <Image
       src={logoChinchay}
       alt="logoChinchaycamac"
@@ -28,11 +33,18 @@ import Menu from "../icons/Menu.astro";
     </nav>
   </div>
 
-  <a id="btnMenu" href="#" class="absolute z-20 right-8 top-5 justify-center  lg:hidden">
-    <Menu></Menu>
+  <a
+    id="btnMenu"
+    href="#"
+    class="absolute z-20 right-8 top-5 justify-center lg:hidden"
+  >
+    <Menu />
   </a>
 
-  <div id="mobileMenu" class="absolute  flex justify-center  top-0 h-[30vh] left-0 w-full bg-[#1abc9c] z-10 lg:hidden">
+  <div
+    id="mobileMenu"
+    class="absolute top-0 h-[30vh] left-0 w-full bg-[#1abc9c] z-10 hidden"
+  >
     <!-- Aquí va el contenido del menú desplegable para dispositivos móviles -->
     <ul class="text-white text-center py-6 space-y-4">
       <li><a href="#inicio">Inicio</a></li>
@@ -42,7 +54,7 @@ import Menu from "../icons/Menu.astro";
       <li><a href="#testimonio">Testimonio</a></li>
     </ul>
   </div>
-  
+
   <div
     class="absolute flex flex-col space-y-16 justify-center items-center h-full w-full"
   >
@@ -58,8 +70,6 @@ import Menu from "../icons/Menu.astro";
       >Reservar</a
     >
   </div>
-
-
 </header>
 
 

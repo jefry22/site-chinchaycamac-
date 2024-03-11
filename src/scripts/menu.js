@@ -4,4 +4,3 @@ const button = document.querySelector('#btnMenu');
     e.preventDefault();
     menuOpen.classList.toggle('hidden');
   })
-  console.log(button)
