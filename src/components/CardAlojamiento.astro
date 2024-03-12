@@ -1,24 +1,33 @@
 ---
-import Area from '../icons/Area.astro';
-import Cama from '../icons/Cama.astro';
-import Personas from '../icons/Personas.astro';
-import Info from './Info.astro'
+import Area from "../icons/Area.astro";
+import Cama from "../icons/Cama.astro";
+import Personas from "../icons/Personas.astro";
+import Info from "./Info.astro";
 
 interface Props {
   title: string;
   area: string;
   price: string;
-  nHabitaciones:number;
+  nHabitaciones: number;
   tipoCama: string;
   servicios: string[];
   capacidad: string;
   url: string;
 }
-const { title, price,nHabitaciones, area, tipoCama, servicios, capacidad, url } = Astro.props;
+const {
+  title,
+  price,
+  nHabitaciones,
+  area,
+  tipoCama,
+  servicios,
+  capacidad,
+  url,
+} = Astro.props;
 ---
 
 <div
-  class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-10"
+  class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-10"
 >
   <div class="relative">
     <img
@@ -27,29 +36,26 @@ const { title, price,nHabitaciones, area, tipoCama, servicios, capacidad, url } 
       alt=""
     />
     <div
-      class="absolute top-0 m-2 px-4 py-2 text-sm rounded-2xl text-white bg-[#003366]"
+      class="absolute top-0 m-2 px-4 py-2 text-sm rounded-2xl text-white bg-[#60a2bf] font-semibold"
     >
       {price}
     </div>
   </div>
 
   <div class="p-5">
-    <h5
-      class="mb-2 text-xl font-bold tracking-tight text-[#003366] dark:text-white"
->
+    <h5 class="mb-2 text-lg font-semibold tracking-tight text-[#383D44] dark:text-white">
       {title}
     </h5>
     <div class="flex flex-col px-5 opacity-70 space-y-2 mt-4 text-base">
       <Info tipo={area}>
-        <Area/>
+        <Area />
       </Info>
       <Info tipo={tipoCama}>
-        <Cama/>
+        <Cama />
       </Info>
       <Info tipo={capacidad}>
-        <Personas/>
+        <Personas />
       </Info>
     </div>
-    
   </div>
 </div>

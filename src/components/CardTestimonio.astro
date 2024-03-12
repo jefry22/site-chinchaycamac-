@@ -7,14 +7,17 @@ const { author_name, rating, text } = Astro.props;
 
 <!-- component -->
 <div
-  class="p-6 relative flex flex-col items-center space-y-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  class="p-6 relative shadow-xl flex flex-col items-center space-y-4 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700"
 >
-  <div class="w-20 h-20 bg-red-500 rounded-full"></div>
+  <div
+    class="w-16 h-16 bg-[#4b5563] text-white font-extrabold rounded-full flex justify-center items-center"
+  >
+    <p>{author_name[0]}</p>
+  </div>
   <div class="absolute top-0 right-10 rotate-12">
-    {<Quote></Quote>}
-</div>
-  <div class="px-6 space-y-3 ">
-    
+    {(<Quote />)}
+  </div>
+  <div class="px-6 space-y-3">
     <h4 class="mt-4 text-gray-800 font-semibold">{author_name}</h4>
     <p class="text-gray-500">{text}</p>
   </div>

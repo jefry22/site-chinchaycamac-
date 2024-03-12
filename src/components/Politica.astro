@@ -1,0 +1,30 @@
+---
+import Certificate from "../icons/Certificate.astro";
+import { Image } from "astro:assets";
+import palmera from '../../public/palmera.png';
+---
+
+<div
+  class="bg-[#f3f3f4]
+   flex-col items-center space-y-2
+   flex lg:flex-row lg:px-20 lg:items-start
+   px-7 py-4 relative"
+>
+  <Certificate />
+  <div class="w-full lg:w-2/5">
+    <h5>Politicas de cancelación y reglas del alojamiento</h5>
+    <p class="text-[#383D44] font-light">
+      Es importante que los huéspedes estén al tanto de estas políticas al
+      realizar una reserva y que el alojamiento las aplique de manera
+      consistente
+    </p>
+    <a href="#" class="text-[#60a2bf] mt-4 block"
+      >Leer todas las políticas y reglas de alojamiento</a
+    >
+  </div>
+  <Image
+    src={palmera}
+    alt=""
+    class="w-[20%] h-[270px] absolute right-40 top-[-20px] hidden lg:flex"
+  />
+</div>
