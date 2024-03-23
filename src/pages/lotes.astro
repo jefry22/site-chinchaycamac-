@@ -1,0 +1,144 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Preloader from "../components/Preloader.astro";
+import Footer from "../components/Footer.astro";
+import Politica from "../components/Politica.astro";
+import Header from "../components/Header.astro";
+import iconoAgua from "../../public/grifo-de-agua.png"
+import iconoParque from "../../public/parque.png"
+import precioLotes from "../../public/preciolotes.png"
+import iconoPiscina from "../../public/piscina.png"
+import iconoSeguridad from "../../public/proteger.png"
+import iconoLuz from "../../public/idea.png"
+import lote from "../../public/loteimg.png"
+import folleto from "../../public/folleto.jpg"
+
+
+import { Image } from "astro:assets";
+---
+
+<Layout title="venta de lotes">
+  <!-- <Preloader></Preloader> -->
+  <Header title="Tu lote playa soñado" />
+  <section class=" lg:px-20 py-20">
+
+    <div class="flex-col text-center px-2 lg:flex  lg:justify-between  lg:gap-x-2 lg:mb-20 ">
+      <h2 class="text-4xl uppercase">Beneficios</h2>
+      <div class=" bg-blue-900 p-[0.8px]"></div>
+    </div>
+    <!-- Slider main container -->
+    <div class="swiper  w-[80%]  my-10">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper gap-2">
+        <!-- Slides -->
+  
+        <div class="swiper-slide">
+          <div class="w-full h-full flex justify-center py-20 bg-blue-300">
+            <Image width="160" class="object-contain" src={iconoAgua} alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="w-full h-full flex justify-center py-20 bg-yellow-400">
+            <Image width="160" class="object-contain" src={iconoLuz} alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="w-full h-full flex justify-center py-20 bg-green-400">
+            <Image width="160" class="object-contain" src={iconoParque} alt="" />
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+          <div class="w-full h-full flex justify-center py-20 bg-blue-400">
+            <Image width="160" class="object-contain" src={iconoPiscina} alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="w-full h-full flex justify-center py-20 bg-yellow-700">
+            <Image width="160" class="object-contain" src={iconoSeguridad} alt="" />
+          </div>
+        </div>
+     
+      </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+  
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev ">
+        <svg  xmlns="http://www.w3.org/2000/svg"  
+        width="40"  height="40"  
+        viewBox="0 0 24 24"  
+        fill="none"  
+        stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M5 12l14 0" /><path d="M5 12l6 6" />
+          <path d="M5 12l6 -6" /></svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg  xmlns="http://www.w3.org/2000/svg" 
+         width="24"  height="24"  
+         viewBox="0 0 24 24"  
+         fill="none"  stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>
+      </div>
+  
+      <!-- If we need scrollbar -->
+  
+    </div>
+
+  </section>
+
+  <!-- Section Conoce más del proyecto -->
+  <section class="lg:px-20 px-8 bg-gray-100 py-20 flex flex-col gap-y-10">
+    <div class="flex-col lg:flex items-center justify-between  gap-x-2 ">
+      <h2 class="text-4xl uppercase">Conoce más del Proyecto</h2>
+      <div class="w-[50%] bg-blue-900 p-[0.8px]"></div>
+    </div>
+
+  
+      <p class="text-gray-500 leading-6">
+        En chinchaycamac es la oportunidad para que tú y tu familia disfruten de vivir en un proyecto cercano al mar. La oportunidad de construir hasta 2 pisos mas terraza te abrirá un mundo de posibilidades, desde lujosas viviendas unifamiliares hasta
+        exclusivos departamentos de inversión con vista al mar.
+      </p>
+
+      <div class="lg:flex flex flex-col-reverse item justify-between lg:items-start">
+        <div class="py-8 text-lg list-none space-y-3">
+          <li><a>Area construida 96m2</a></li>
+          <li><a>2 Habitaciones</a></li>
+          <li><a>2 Baños completos</a></li>
+          <li><a>Area de servicios</a></li>
+          <li><a>Open kitchen</a></li>
+          <li><a>Comedor</a></li>
+          <li><a>Sala</a></li>
+          <li><a>Terraza</a></li>
+          <li><a>Precio llave en mano $45.000</a></li>
+        </div>
+        
+        <Image width={700} height={500} src={lote} alt="lote"></Image>  
+        
+      </div>
+  </section>
+
+
+    <div class="lg:px-20  flex-col py-20 lg:flex justify-center">
+      <Image class="object-cover w-full  lg:w-2/5" src={folleto} alt="precio"></Image>
+      <Image class="lg:object-fill object-center w-full lg:w-2/5 h-[600px] " src={precioLotes} alt="precio"></Image>
+      
+    </div>
+    <Politica></Politica>
+    <Footer></Footer>
+
+
+
+</Layout>
+
+<style>
+  .swiper-button-prev:after{
+    display: none;
+  }
+  .swiper-button-next:after{
+    display: none;
+  }
+  .swiper-button-prev{
+    position: absolute;
+  }
+</style>

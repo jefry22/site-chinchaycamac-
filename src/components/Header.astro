@@ -3,6 +3,10 @@ import { Image } from "astro:assets";
 import "@fontsource/lobster";
 import logoChinchay from "../../public/logoChinchay.webp";
 import Menu from "../icons/Menu.astro";
+import HouseInfo from '../icons/HouseInfo.astro';
+import Kitchen from '../icons/Kitchen.astro';
+
+const {title} = Astro.props;
 ---
 
 <header class="w-full h-[100vh] bg-cover bg-center relative overflow-hidden">
@@ -25,7 +29,7 @@ import Menu from "../icons/Menu.astro";
       class="w-[173px] h-[48px]"
     />
     <nav class="lg:flex hidden space-x-2 text-white z-20">
-      <a href="#inicio">Inicio</a>
+      <a href='/'>Inicio</a>
       <a href="#somos">Quienes Somos</a>
       <a href="#alojamiento">Alojamiento</a>
       <a href="#ubicacion">Ubicación</a>
@@ -43,11 +47,11 @@ import Menu from "../icons/Menu.astro";
 
   <div
     id="mobileMenu"
-    class="absolute top-0 h-[30vh] left-0 w-full bg-[#1abc9c] z-10 hidden"
+    class="absolute top-0 h-[30vh] left-0 w-full bg-blue-900 z-10 hidden"
   >
     <!-- Aquí va el contenido del menú desplegable para dispositivos móviles -->
     <ul class="text-white text-center py-6 space-y-4">
-      <li><a href="#inicio">Inicio</a></li>
+      <li><a href='/'>Inicio</a></li>
       <li><a href="#somos">Quienes Somos</a></li>
       <li><a href="#alojamiento">Alojamiento</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
@@ -62,14 +66,27 @@ import Menu from "../icons/Menu.astro";
       class="text-5xl lg:text-6xl text-white text-center lg:w-1/2 text-pretty"
       style="font-family:'Lobster'"
     >
-      Tu hogar lejos de casa, con vistas al mar
+      {title}
     </h2>
+    <div class="flex-col flex gap-y-5 lg:flex-row lg:gap-x-7 ">
+      <a
+      href='/lotes'
+      class="bg-blue-900 gap-x-7 hover:bg-gray-600 flex justify-center px-7 lg:px-12 text-lg lg:text-lg py-3  lg:py-2 rounded-2xl text-white font-light"
+      >
+      <HouseInfo></HouseInfo>
+      Lotes</a
+    >
     <a
       href="#"
-      class="bg-[#60a2bf] flex justify-center px-7 lg:px-12 text-lg lg:text-xl py-3  lg:py-2 rounded-2xl text-white font-medium"
-      >Reservar</a
+      class="bg-gray-600 gap-x-7 hover:bg-blue-900 flex justify-center px-7 lg:px-12 text-lg lg:text-lg py-3  lg:py-2 rounded-2xl text-white font-light"
+      >
+      <Kitchen></Kitchen>
+      Restaurante</a
     >
+    </div>
+   
   </div>
+
 </header>
 
 

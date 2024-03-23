@@ -6,10 +6,14 @@ import Ubicacion from "../components/Ubicacion.astro";
 import Testimonios from "../components/Testimonios.astro";
 import Politica from "../components/Politica.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Preloader from '../components/Preloader.astro'
 import WhatsApp from '../icons/WhatsApp.astro';
 ---
 
 <Layout title="Alquiler de casas playas en chinchaycamac">
+  <Header title="Tu hogar lejos de casa, con vistas al mar"></Header>
+  <Preloader/>
   <QuienesSomos />
   <Alojamiento />
   <Ubicacion />
@@ -21,4 +25,5 @@ import WhatsApp from '../icons/WhatsApp.astro';
       <WhatsApp/>
     </a>
   </div>
+
 </Layout>

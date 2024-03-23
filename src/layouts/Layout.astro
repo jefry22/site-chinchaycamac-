@@ -20,18 +20,26 @@ const { title } = Astro.props;
   
   </head>
   <body>
-    <Header />
     <slot />
   </body>
 </html>
 <style is:global>
-  html {
-    background-size: 224px;
-    font-family: "Onest Variable", sans-serif;
-  }
+ /* Estilos por defecto */
+ html{
+  scroll-behavior: smooth;
+ }
+ body::-webkit-scrollbar{
+  width: 10px;
+ }
+ body::-webkit-scrollbar-thumb{
+  background-color:#1e3a8a ;
+  border-radius: 50px;
+ }
   body {
     background-color: #fff;
     min-height: 100vh;
+    background-size: 224px;
+    font-family: "Onest Variable", sans-serif;
   }
 </style>
 <script>

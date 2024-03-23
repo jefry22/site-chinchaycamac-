@@ -2,10 +2,10 @@
 import reviews from "../scripts/reviews";
 import CardTestimonios from '../components/CardTestimonio.astro'
 ---
-<div class="flex flex-col px-7 lg:px-20">
-    <div class="my-8 lg:my-14 flex-col flex items-center">
+<div id="testimonio" class="flex flex-col px-7 lg:px-20 my-20">
+    <div class="my-8  flex-col flex items-center">
 		<h2 class="text-lg lg:text-2xl font-semibold text-center uppercase ">Testimonios</h2>
-		<div class="w-[120px] h-[4px] bg-[#60a2bf] mt-2 rounded-lg"></div>
+		<div class="w-[120px] h-[4px] bg-blue-900 mt-2 rounded-lg"></div>
 	  </div>
 	<div class="grid lg:grid-cols-3 justify-around space-y-4 lg:space-y-0 mb-14 lg:space-x-4 mt-10">
 		{reviews.map((review) => <CardTestimonios {...review} />)}
