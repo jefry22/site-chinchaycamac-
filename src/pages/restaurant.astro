@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BtnWhasht from "../components/BtnWhasht.astro";
+import Header from "../components/Header.astro";
+import Politica from "../components/Politica.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import image1 from '../../public/restaurante1.jpg'
+import image2 from '../../public/restaurante2.jpg'
+import Preloader from "../components/Preloader.astro";
+---
+
+<Layout title="Restaurante">
+    
+    <Header title="Bienvenido A nuestro Restaurante"></Header>
+    <Preloader></Preloader>
+    <Image class="w-full  object-contain" src={image1} alt="comidas"></Image>
+    <Image class="w-full  object-contain" src={image2} alt="comidas"></Image>
+    <Politica></Politica>
+    <Footer></Footer>
+    <BtnWhasht></BtnWhasht>
+</Layout>
