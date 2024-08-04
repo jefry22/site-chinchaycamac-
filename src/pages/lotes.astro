@@ -11,6 +11,7 @@ import iconoPiscina from "../../public/piscina.png"
 import iconoSeguridad from "../../public/proteger.png"
 import iconoLuz from "../../public/idea.png"
 import lote from "../../public/loteimg.png"
+import anuncio from "../../public/banner-Anuncio.jpg"
 import folleto from "../../public/folleto.jpg"
 
 
@@ -19,10 +20,10 @@ import BtnWhasht from "../components/BtnWhasht.astro";
 ---
 
 <Layout title="venta de lotes">
-  <Preloader></Preloader>
+  <!-- <Preloader></Preloader> -->
   <Header title="Tu lote playa soñado" />
   <section class=" lg:px-20 py-20">
-
+    <Image width="800" class="object-center w-[100%]" src={anuncio} alt="" />
     <div class="flex flex-col lg:flex lg:flex-row items-center justify-between  gap-x-2">
       <h2 class="text-4xl uppercase">Beneficios</h2>
       <div class="w-[50%] bg-blue-900 p-[0.8px]"></div>
